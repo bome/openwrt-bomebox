@@ -190,8 +190,6 @@ foreach my $mirror (@ARGV) {
 #push @mirrors, 'http://mirror1.openwrt.org';
 push @mirrors, 'http://mirror2.openwrt.org/sources';
 push @mirrors, 'http://downloads.openwrt.org/sources';
-#$$fb: added mirror for gmp-5.1.0
-push @mirrors, 'https://gmplib.org/download/gmp';
 
 while (!$ok) {
 	my $mirror = shift @mirrors;

@@ -1,0 +1,37 @@
+--- a/arch/mips/ath79/machtypes.h
++++ b/arch/mips/ath79/machtypes.h
+@@ -37,6 +37,7 @@
+ 	ATH79_MACH_BHU_BXU2000N2_A1,	/* BHU BXU2000n-2 A1 */
+ 	ATH79_MACH_CAP4200AG,		/* Senao CAP4200AG */
+ 	ATH79_MACH_CARAMBOLA2,		/* 8devices Carambola2 */
++	ATH79_MACH_BOMEBOX,		/* BomeBox */
+ 	ATH79_MACH_DB120,		/* Atheros DB120 reference board */
+ 	ATH79_MACH_PB44,		/* Atheros PB44 reference board */
+ 	ATH79_MACH_DIR_505_A1,		/* D-Link DIR-505 rev. A1 */
+--- a/arch/mips/ath79/Kconfig
++++ b/arch/mips/ath79/Kconfig
+@@ -1015,6 +1015,16 @@
+ 	select ATH79_DEV_USB
+ 	select ATH79_DEV_WMAC
+ 
++config ATH79_MACH_BOMEBOX
++	bool "BomeBox board"
++	select SOC_AR933X
++	select ATH79_DEV_ETH
++	select ATH79_DEV_GPIO_BUTTONS
++	select ATH79_DEV_LEDS_GPIO
++	select ATH79_DEV_M25P80
++	select ATH79_DEV_USB
++	select ATH79_DEV_WMAC
++
+ config ATH79_MACH_BHU_BXU2000N2_A
+ 	bool "BHU BXU2000n-2 rev. A support"
+ 	select SOC_AR934X
+--- a/arch/mips/ath79/Makefile
++++ b/arch/mips/ath79/Makefile
+@@ -140,4 +140,5 @@
+ obj-$(CONFIG_ATH79_MACH_WZR_HP_G450H)	+= mach-wzr-hp-g450h.o
+ obj-$(CONFIG_ATH79_MACH_ZCN_1523H)	+= mach-zcn-1523h.o
+ obj-$(CONFIG_ATH79_MACH_CARAMBOLA2)	+= mach-carambola2.o
++obj-$(CONFIG_ATH79_MACH_BOMEBOX)	+= mach-bomebox.o
+ obj-$(CONFIG_ATH79_MACH_NBG6716)	+= mach-nbg6716.o

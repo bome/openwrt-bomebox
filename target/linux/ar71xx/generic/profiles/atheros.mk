@@ -49,6 +49,18 @@ endef
 
 $(eval $(call Profile,CARAMBOLA2))
 
+define Profile/BOMEBOX
+        NAME:=BomeBox
+        PACKAGES:=kmod-usb-core kmod-usb2
+endef
+
+define Profile/BOMEBOX/Description
+        Package set optimized for the BomeBox.
+endef
+
+$(eval $(call Profile,BOMEBOX))
+
+
 define Profile/AP132
 	NAME:=Atheros AP132 reference board
 	PACKAGES:=kmod-usb-core kmod-usb2 kmod-usb-storage

@@ -724,6 +724,9 @@ ar71xx_board_detect() {
 	"8devices Carambola2"*)
 		name="carambola2"
 		;;
+	"BomeBox"*)
+		name="bomebox"
+		;;
 	*"Sitecom WLR-8100")
 		name="wlr8100"
 		;;

@@ -107,9 +107,9 @@ $ht_capab
 
 config wifi-iface
 	option device   radio$devidx
-	option network  lan
+	option network  wifi
 	option mode     ap
-	option ssid     Carambola2
+	option ssid     BomeBox
 	option encryption none
 
 EOF

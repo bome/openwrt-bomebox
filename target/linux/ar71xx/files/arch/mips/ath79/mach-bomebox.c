@@ -33,7 +33,7 @@
 
 #define BOME_HAS_I2C  0
 
-#define PROTO2
+//#define PROTO2
 
 #ifdef PROTO2
 #define BOMEBOX_GPIO_LED_WIFI		1

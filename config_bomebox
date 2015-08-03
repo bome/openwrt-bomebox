@@ -2814,7 +2814,7 @@ CONFIG_PACKAGE_lua=y
 #
 # Compression
 #
-CONFIG_PACKAGE_libbz2=y
+# CONFIG_PACKAGE_libbz2 is not set
 # CONFIG_PACKAGE_liblzma is not set
 
 #
@@ -2858,8 +2858,7 @@ CONFIG_PACKAGE_libopenssl=y
 #
 # Configuration
 #
-CONFIG_OPENSSL_WITH_EC=y
-# CONFIG_OPENSSL_WITH_EC2M is not set
+# CONFIG_OPENSSL_WITH_EC is not set
 # CONFIG_OPENSSL_ENGINE_CRYPTO is not set
 CONFIG_PACKAGE_libpolarssl=y
 
@@ -2901,9 +2900,9 @@ CONFIG_PACKAGE_alsa-lib=y
 # CONFIG_PACKAGE_libarchive is not set
 # CONFIG_PACKAGE_libartnet is not set
 # CONFIG_PACKAGE_libaudiofile is not set
-# CONFIG_PACKAGE_libavahi-client is not set
+CONFIG_PACKAGE_libavahi-client=y
 # CONFIG_PACKAGE_libavahi-compat-libdnssd is not set
-# CONFIG_PACKAGE_libavahi-dbus-support is not set
+CONFIG_PACKAGE_libavahi-dbus-support=y
 # CONFIG_PACKAGE_libavahi-nodbus-support is not set
 # CONFIG_PACKAGE_libavl is not set
 CONFIG_PACKAGE_libblkid=y
@@ -2913,12 +2912,12 @@ CONFIG_PACKAGE_libcap=y
 # CONFIG_PACKAGE_libcharset is not set
 # CONFIG_PACKAGE_libconfig is not set
 # CONFIG_PACKAGE_libcurl is not set
-# CONFIG_PACKAGE_libdaemon is not set
+CONFIG_PACKAGE_libdaemon=y
 # CONFIG_PACKAGE_libdaq is not set
 # CONFIG_PACKAGE_libdb47 is not set
 # CONFIG_PACKAGE_libdb47xx is not set
 # CONFIG_PACKAGE_libdbi is not set
-# CONFIG_PACKAGE_libdbus is not set
+CONFIG_PACKAGE_libdbus=y
 # CONFIG_PACKAGE_libdevmapper is not set
 # CONFIG_PACKAGE_libdmapsharing is not set
 # CONFIG_PACKAGE_libdnet is not set
@@ -2933,7 +2932,7 @@ CONFIG_PACKAGE_libcap=y
 # CONFIG_PACKAGE_libevent2-pthreads is not set
 # CONFIG_PACKAGE_libevhtp is not set
 # CONFIG_PACKAGE_libexif is not set
-# CONFIG_PACKAGE_libexpat is not set
+CONFIG_PACKAGE_libexpat=y
 # CONFIG_PACKAGE_libexslt is not set
 # CONFIG_PACKAGE_libf2fs is not set
 # CONFIG_PACKAGE_libfaad2 is not set
@@ -3476,9 +3475,13 @@ CONFIG_PACKAGE_iptables-mod-ipopt=y
 # IP Addresses and Names
 #
 # CONFIG_PACKAGE_announce is not set
-# CONFIG_PACKAGE_avahi-autoipd is not set
-# CONFIG_PACKAGE_avahi-dbus-daemon is not set
+CONFIG_PACKAGE_avahi-autoipd=y
+CONFIG_PACKAGE_avahi-daemon-service-http=y
+# CONFIG_PACKAGE_avahi-daemon-service-ssh is not set
+CONFIG_PACKAGE_avahi-dbus-daemon=y
+# CONFIG_PACKAGE_avahi-dnsconfd is not set
 # CONFIG_PACKAGE_avahi-nodbus-daemon is not set
+# CONFIG_PACKAGE_avahi-utils is not set
 # CONFIG_PACKAGE_bind-check is not set
 # CONFIG_PACKAGE_bind-client is not set
 # CONFIG_PACKAGE_bind-dig is not set
@@ -3599,6 +3602,7 @@ CONFIG_PACKAGE_tc=y
 # CONFIG_PACKAGE_openssh-moduli is not set
 # CONFIG_PACKAGE_openssh-server is not set
 # CONFIG_PACKAGE_openssh-server-pam is not set
+# CONFIG_PACKAGE_openssh-sftp-avahi-service is not set
 # CONFIG_PACKAGE_openssh-sftp-client is not set
 # CONFIG_PACKAGE_openssh-sftp-server is not set
 # CONFIG_PACKAGE_sshtunnel is not set
@@ -3784,7 +3788,7 @@ CONFIG_PACKAGE_tc=y
 # CONFIG_PACKAGE_tinyproxy is not set
 CONFIG_PACKAGE_uhttpd=y
 # CONFIG_PACKAGE_uhttpd_debug is not set
-CONFIG_PACKAGE_uhttpd-mod-lua=y
+# CONFIG_PACKAGE_uhttpd-mod-lua is not set
 CONFIG_PACKAGE_uhttpd-mod-tls=y
 CONFIG_PACKAGE_uhttpd-mod-tls_polarssl=y
 # CONFIG_PACKAGE_uhttpd-mod-tls_cyassl is not set
@@ -3936,6 +3940,7 @@ CONFIG_PACKAGE_wpad-mini=y
 # CONFIG_PACKAGE_lame-lib is not set
 # CONFIG_PACKAGE_madplay is not set
 # CONFIG_PACKAGE_mpc is not set
+# CONFIG_PACKAGE_mpd-avahi-service is not set
 # CONFIG_PACKAGE_mpd-mini is not set
 # CONFIG_PACKAGE_pianod is not set
 # CONFIG_PACKAGE_pianod-client is not set
@@ -3959,7 +3964,7 @@ CONFIG_PACKAGE_wpad-mini=y
 #
 # Compression
 #
-CONFIG_PACKAGE_bzip2=y
+# CONFIG_PACKAGE_bzip2 is not set
 # CONFIG_PACKAGE_unrar is not set
 CONFIG_PACKAGE_unzip=y
 # CONFIG_PACKAGE_xz-utils is not set
@@ -4076,8 +4081,8 @@ CONFIG_PACKAGE_nano=y
 # CONFIG_PACKAGE_zoneinfo-poles is not set
 # CONFIG_PACKAGE_zoneinfo-simple is not set
 # CONFIG_PACKAGE_zoneinfo-southamerica is not set
-CONFIG_PACKAGE_alsa-utils=y
-CONFIG_PACKAGE_alsa-utils-seq=y
+# CONFIG_PACKAGE_alsa-utils is not set
+# CONFIG_PACKAGE_alsa-utils-seq is not set
 # CONFIG_PACKAGE_alsa-utils-tests is not set
 # CONFIG_PACKAGE_avrdude is not set
 # CONFIG_PACKAGE_bash is not set
@@ -4193,7 +4198,8 @@ CONFIG_PACKAGE_coreutils-truncate=y
 # CONFIG_PACKAGE_coreutils-yes is not set
 # CONFIG_PACKAGE_cryptsetup is not set
 # CONFIG_PACKAGE_cryptsetup-openssl is not set
-# CONFIG_PACKAGE_dbus is not set
+CONFIG_PACKAGE_dbus=y
+# CONFIG_PACKAGE_dbus-utils is not set
 # CONFIG_PACKAGE_dmesg is not set
 # CONFIG_PACKAGE_dropbearconvert is not set
 # CONFIG_PACKAGE_dump1090 is not set

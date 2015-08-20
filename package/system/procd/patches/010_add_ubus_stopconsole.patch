@@ -1,0 +1,38 @@
+--- a/system.c
++++ b/system.c
+@@ -223,6 +223,27 @@
+ 	return 0;
+ }
+ 
++/* bome: use "ubus call system stopconsole" to stop console output */
++static int system_stopconsole(struct ubus_context *ctx, struct ubus_object *obj,
++			struct ubus_request_data *req, const char *method,
++			struct blob_attr *msg)
++{
++	int dd;
++	LOG("disconnect console.\n");
++	dd = open("/dev/null", O_RDWR);
++
++	dup2(dd, STDIN_FILENO);
++	dup2(dd, STDOUT_FILENO);
++	dup2(dd, STDERR_FILENO);
++
++	if (dd != STDIN_FILENO &&
++	    dd != STDOUT_FILENO &&
++	    dd != STDERR_FILENO)
++		close(dd);
++	return 0;
++}
++
++
+ enum {
+ 	WDT_FREQUENCY,
+ 	WDT_TIMEOUT,
+@@ -369,6 +390,7 @@
+ 	UBUS_METHOD_NOARG("board", system_board),
+ 	UBUS_METHOD_NOARG("info",  system_info),
+ 	UBUS_METHOD_NOARG("upgrade", system_upgrade),
++	UBUS_METHOD_NOARG("stopconsole", system_stopconsole), /* bome */
+ 	UBUS_METHOD("watchdog", watchdog_set, watchdog_policy),
+ 	UBUS_METHOD("signal", proc_signal, signal_policy),
+ 

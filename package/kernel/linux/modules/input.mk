@@ -71,6 +71,7 @@ CONFIG_HID_MICROSOFT \
 CONFIG_HID_MONTEREY \
 CONFIG_HID_ORTEK \
 CONFIG_HID_PRIMAX \
+CONFIG_HID_PRODIKEYS \
 CONFIG_HID_ROCCAT \
 CONFIG_HID_SAITEK \
 CONFIG_HID_SAMSUNG \
@@ -128,6 +129,7 @@ $(LINUX_DIR)/drivers/hid/hid-microsoft.ko \
 $(LINUX_DIR)/drivers/hid/hid-monterey.ko \
 $(LINUX_DIR)/drivers/hid/hid-ortek.ko \
 $(LINUX_DIR)/drivers/hid/hid-primax.ko \
+$(LINUX_DIR)/drivers/hid/hid-prodikeys.ko \
 $(LINUX_DIR)/drivers/hid/hid-roccat-arvo.ko \
 $(LINUX_DIR)/drivers/hid/hid-roccat-common.ko \
 $(LINUX_DIR)/drivers/hid/hid-roccat-isku.ko \
@@ -194,6 +196,7 @@ hid-microsoft \
 hid-monterey \
 hid-ortek \
 hid-primax \
+hid-prodikeys \
 hid-roccat-arvo \
 hid-roccat-common \
 hid-roccat-isku \
@@ -222,7 +225,7 @@ hid-waltop \
 hid-zpff \
 hid-zydacron \
 )
-  $(call AddDepends/input,+kmod-usb-core +kmod-hid)
+  $(call AddDepends/input,+kmod-usb-core +kmod-hid +kmod-sound-core)
 endef
 
 define KernelPackage/hid-bome/description
